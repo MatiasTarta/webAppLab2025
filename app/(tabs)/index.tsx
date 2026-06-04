@@ -4,11 +4,9 @@ import { Pressable, StyleSheet, Text, View, useWindowDimensions } from 'react-na
 export default function Home() {
   const router = useRouter()
 
-  // Este hook detecta el ancho y alto exacto en tiempo real (Web y Mobile)
   const { width } = useWindowDimensions()
 
-  // Calculamos el tamaño de la fuente dinámicamente basado en el estado actual de la pantalla
-  const dynamicTitleSize = width * 0.12 // Un factor un poco más equilibrado para web/móvil
+  const dynamicTitleSize = width * 0.12
   const dynamicLineHeight = dynamicTitleSize * 1.1
 
   return (
@@ -18,7 +16,6 @@ export default function Home() {
       <View style={styles.content}>
         <Text style={styles.eyebrow}>✦ colección de instrumentos ✦</Text>
 
-        {/* Pasamos los estilos dinámicos directamente en un array */}
         <Text style={[
           styles.title,
           { fontSize: dynamicTitleSize, lineHeight: dynamicLineHeight }
@@ -63,8 +60,8 @@ const styles = StyleSheet.create({
   content: {
     alignItems: 'center',
     gap: 18,
-    width: '100%', // Asegura que el contenedor use el espacio responsivo
-    maxWidth: 600,  // Evita que en pantallas gigantes de PC se deforme el layout
+    width: '100%',
+    maxWidth: 600,
   },
   eyebrow: {
     fontSize: 11,
@@ -78,7 +75,7 @@ const styles = StyleSheet.create({
     color: '#e8e0d5',
     textAlign: 'center',
     fontStyle: 'italic',
-    fontWeight: '300', // Un toque más estilizado para pantallas grandes
+    fontWeight: '300',
   },
   sub: {
     fontSize: 16,

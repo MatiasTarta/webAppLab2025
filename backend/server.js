@@ -6,7 +6,6 @@ app.use(express.json()); // parsea el json del body
 
 app.use(express.static('public')); // sirve los archivos estáticos vistas, css, js
 
-// 2. Habilitamos CORS para CUALQUIER origen (Web, Emulador, Celular)
 app.use(cors());
 
 app.use(express.json());
@@ -196,7 +195,6 @@ app.put('/api/instrumentos/:id', (req, res) => {
   // Devolver instrumento actualizado
   res.json(instrumentos[index]);
 });
-// === API ===
 
 // inicia servidor
 app.listen(3000, () => {

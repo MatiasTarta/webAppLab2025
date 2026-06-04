@@ -14,7 +14,7 @@ import {
 const CATEGORIAS = ['teclado', 'percusion', 'cuerda', 'viento', 'electronico'];
 const ESCALAS = ['ninguna', 'DOr', 'DOm', 'RE', 'REm', 'MI', 'FA', 'SOL', 'LAm'];
 
-// Configuración de la URL de tu Backend (Express)
+
 const API_URL = 'http://localhost:3000';
 
 export default function CrearInstrumento() {
@@ -48,7 +48,6 @@ export default function CrearInstrumento() {
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                     ...form,
-                    // Guardamos nombres planos limpios por si el usuario escribe la ruta vieja de Vite
                     imagen: form.imagen.replace('../assets/img/', '').trim() || 'placeholder.png',
                     carpetaSonidos: form.carpetaSonidos.trim()
                 }),
@@ -70,8 +69,6 @@ export default function CrearInstrumento() {
                 link: '',
                 carpetaSonidos: '',
             });
-
-            // Alerta nativa de éxito y regreso automático a la cuadrícula
             Alert.alert('¡Éxito!', `Instrumento creado con ID ${data.id}`, [
                 { text: 'OK', onPress: () => router.replace('/cuadriculada') }
             ]);
@@ -106,8 +103,6 @@ export default function CrearInstrumento() {
                         placeholderTextColor="#555"
                     />
                 </Field>
-
-                {/* Selector Nativo de Categorías mediante Chips táctiles */}
                 <Field label="Categoría *">
                     <View style={styles.selectorGrid}>
                         {CATEGORIAS.map((c) => (
@@ -133,8 +128,6 @@ export default function CrearInstrumento() {
                         placeholderTextColor="#555"
                     />
                 </Field>
-
-                {/* Selector Nativo de Escalas mediante Chips táctiles */}
                 <Field label="Escala">
                     <View style={styles.selectorGrid}>
                         {ESCALAS.map((s) => (
@@ -173,7 +166,6 @@ export default function CrearInstrumento() {
                     />
                 </Field>
 
-                {/* MENSAJES DE ESTADO */}
                 {msg && (
                     <View style={[styles.crearMsg, msg.tipo === 'ok' ? styles.msgOk : styles.msgError]}>
                         <Text style={[styles.msgText, msg.tipo === 'ok' ? styles.textOk : styles.textError]}>
@@ -182,7 +174,6 @@ export default function CrearInstrumento() {
                     </View>
                 )}
 
-                {/* BOTONES DE ACCIÓN */}
                 <View style={styles.crearBtns}>
                     <Pressable style={styles.btnCancelar} onPress={() => router.back()}>
                         <Text style={styles.btnCancelarText}>Cancelar</Text>
@@ -205,7 +196,6 @@ export default function CrearInstrumento() {
     );
 }
 
-// COMPONENTE CONTENEDOR DE CAMPOS (REEMPLAZA A <Field>)
 function Field({ label, hint, children }: { label: string; hint?: string; children: React.ReactNode }) {
     return (
         <View style={styles.crearField}>
@@ -216,7 +206,6 @@ function Field({ label, hint, children }: { label: string; hint?: string; childr
     );
 }
 
-// ESTILOS FIELMENTE TRADUCIDOS DE TU CREARINSTRUMENTO.CSS
 const styles = StyleSheet.create({
     crear: {
         flex: 1,
