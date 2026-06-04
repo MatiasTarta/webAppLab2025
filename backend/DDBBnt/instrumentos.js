@@ -30,7 +30,7 @@ let instrumentos = [
     link: "./individualPianoSonidos.html",
     carpetaSonidos: "../assets/sonidos/pianoPsico/"
   },
-  
+
   // Instrumentos adicionales (no funcionales, solo visuales)
   {
     id: 4,
