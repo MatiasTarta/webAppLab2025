@@ -1,9 +1,19 @@
 const express = require('express');
+const cors = require('cors'); // 1. Requerimos el paquete
 const app = express();
 
 app.use(express.json()); // parsea el json del body
 
 app.use(express.static('public')); // sirve los archivos estáticos vistas, css, js
+
+// 2. Habilitamos CORS para CUALQUIER origen (Web, Emulador, Celular)
+app.use(cors());
+
+app.use(express.json());
+app.use(express.static('public'));
+
+
+
 
 //me traigo los datos de la ddbbn't
 const dbnt = require('./DDBBnt/instrumentos.js');
@@ -20,20 +30,20 @@ app.get('/api/instrumentos', (req, res) => {
 
   if (cantidad < 1 || from < 0) {
     console.log(`GET paginado finalizado con errorers`);
-    return res.status(400).json({ 
+    return res.status(400).json({
       error: "Parámetros inválidos cantidad debe ser > 0 y from debe ser >= 0"
-    });    
+    });
   }
 
   // slice sobre el array exportado (slice no modifica, solo devuelve una parte del array)
   const resultado = instrumentos.slice(from, from + cantidad);
-  
+
   res.json({
     total: instrumentos.length,
     cantidad: resultado.length,
     from: from,
     datos: resultado
-  });  
+  });
 });
 
 // GET por ID
@@ -43,7 +53,7 @@ app.get('/api/instrumentos/:id', (req, res) => {
 
   if (isNaN(id)) {
     console.log(`GET por id finalizado con error`);
-    return res.status(400).json({ 
+    return res.status(400).json({
       error: "ID inválido, debe ser un número"
     });
   }
@@ -54,7 +64,7 @@ app.get('/api/instrumentos/:id', (req, res) => {
   // Si no existe -> 404
   if (!instrumento) {
     console.log(`GET por id finalizado con errores`);
-    return res.status(404).json({ 
+    return res.status(404).json({
       error: "Instrumento no encontrado"
     });
   }
@@ -135,16 +145,16 @@ app.put('/api/instrumentos/:id', (req, res) => {
   const id = parseInt(req.params.id);
 
   if (isNaN(id)) {
-    return res.status(400).json({ 
-      error: "ID inválido" 
+    return res.status(400).json({
+      error: "ID inválido"
     });
   }
 
   const index = instrumentos.findIndex(inst => inst.id === id);
 
   if (index === -1) {
-    return res.status(404).json({ 
-      error: "Instrumento no encontrado" 
+    return res.status(404).json({
+      error: "Instrumento no encontrado"
     });
   }
 

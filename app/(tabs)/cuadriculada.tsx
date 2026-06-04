@@ -1,5 +1,5 @@
-import { router } from 'expo-router';
-import { useCallback, useEffect, useState } from 'react';
+import { router, useFocusEffect } from 'expo-router';
+import { useCallback, useState } from 'react';
 import {
     ActivityIndicator,
     FlatList,
@@ -28,8 +28,6 @@ interface ApiResponse {
     datos: Instrumento[];
 }
 
-// Configuración de la URL de tu Backend (Express)
-// Recuerda usar tu IP local en lugar de localhost si testeas en un celular real
 const API_URL = 'http://localhost:3000';
 
 const CATEGORIA_COLOR: Record<string, string> = {
@@ -61,10 +59,11 @@ export default function Cuadriculada() {
         }
     }, []);
 
-    useEffect(() => {
-        cargarInstrumentos();
-    }, [cargarInstrumentos]);
-
+    useFocusEffect(
+        useCallback(() => {
+            cargarInstrumentos();
+        }, [cargarInstrumentos])
+    );
     const renderInstrumento = ({ item }: { item: Instrumento }) => (
         <Pressable
             style={styles.card}
