@@ -1,10 +1,15 @@
 import { useRouter } from 'expo-router'
-import { Dimensions, Pressable, StyleSheet, Text, View } from 'react-native'
-
-const { width } = Dimensions.get('window')
+import { Pressable, StyleSheet, Text, View, useWindowDimensions } from 'react-native'
 
 export default function Home() {
   const router = useRouter()
+
+  // Este hook detecta el ancho y alto exacto en tiempo real (Web y Mobile)
+  const { width } = useWindowDimensions()
+
+  // Calculamos el tamaño de la fuente dinámicamente basado en el estado actual de la pantalla
+  const dynamicTitleSize = width * 0.12 // Un factor un poco más equilibrado para web/móvil
+  const dynamicLineHeight = dynamicTitleSize * 1.1
 
   return (
     <View style={styles.container}>
@@ -12,10 +17,19 @@ export default function Home() {
 
       <View style={styles.content}>
         <Text style={styles.eyebrow}>✦ colección de instrumentos ✦</Text>
-        <Text style={styles.title}>El Ático{'\n'}de Vilma</Text>
+
+        {/* Pasamos los estilos dinámicos directamente en un array */}
+        <Text style={[
+          styles.title,
+          { fontSize: dynamicTitleSize, lineHeight: dynamicLineHeight }
+        ]}>
+          El Ático{'\n'}de Vilma
+        </Text>
+
         <Text style={styles.sub}>
           Un lugar donde cada instrumento{'\n'}guarda su propia historia
         </Text>
+
         <Pressable
           style={({ pressed }) => [styles.btn, pressed && styles.btnPressed]}
           onPress={() => router.push('/cuadriculada')}
@@ -39,7 +53,8 @@ const styles = StyleSheet.create({
   },
   glow: {
     position: 'absolute',
-    width: 300, height: 300,
+    width: 300,
+    height: 300,
     borderRadius: 150,
     backgroundColor: 'rgba(78,205,196,0.06)',
     top: '20%',
@@ -48,6 +63,8 @@ const styles = StyleSheet.create({
   content: {
     alignItems: 'center',
     gap: 18,
+    width: '100%', // Asegura que el contenedor use el espacio responsivo
+    maxWidth: 600,  // Evita que en pantallas gigantes de PC se deforme el layout
   },
   eyebrow: {
     fontSize: 11,
@@ -55,14 +72,13 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     color: '#4ecdc4',
     opacity: 0.8,
-    fontFamily: 'monospace', // Usamos fuente nativa segura
+    fontFamily: 'monospace',
   },
   title: {
-    fontSize: width * 0.18,
-    lineHeight: width * 0.19,
     color: '#e8e0d5',
     textAlign: 'center',
     fontStyle: 'italic',
+    fontWeight: '300', // Un toque más estilizado para pantallas grandes
   },
   sub: {
     fontSize: 16,
@@ -86,7 +102,7 @@ const styles = StyleSheet.create({
     fontSize: 16,
     fontWeight: '600',
     letterSpacing: 0.5,
-    fontFamily: 'monospace', // Estilo código consistente
+    fontFamily: 'monospace',
   },
   footer: {
     position: 'absolute',
