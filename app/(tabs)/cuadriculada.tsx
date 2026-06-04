@@ -74,7 +74,6 @@ export default function Cuadriculada() {
             <View style={styles.imageWrap}>
                 <Image
                     source={{
-                        // Buscamos la imagen de forma limpia en el Backend
                         uri: item.imagen
                             ? `${API_URL}/img/${item.imagen}`
                             : 'https://placehold.co/150x150/1a1a1a/4ecdc4?text=♪',
