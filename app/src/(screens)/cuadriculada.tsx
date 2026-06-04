@@ -68,7 +68,7 @@ export default function Cuadriculada() {
         <Pressable
             style={styles.card}
             onPress={() => {
-                router.push(`/instrumento/${item.id}` as any);
+                router.push(`/${item.id}` as any);
             }}
         >
             <View style={styles.imageWrap}>

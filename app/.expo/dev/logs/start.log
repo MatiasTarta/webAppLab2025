@@ -484,3 +484,55 @@
 {"_e":"metro:client_log","_t":1780614628618,"level":"warn","data":["Route \"./components/useClientOnlyValue.web.ts\" is missing the required default export. Ensure a React component is exported as default."]}
 {"_e":"metro:client_log","_t":1780614628618,"level":"warn","data":["Route \"./components/useColorScheme.web.ts\" is missing the required default export. Ensure a React component is exported as default."]}
 {"_e":"metro:bundling:started","_t":1780614628700,"id":"7","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:started","_t":1780615015558,"id":"a","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:progress","_t":1780615015558,"id":"a","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1780615015589,"id":"a","total":1,"ms":30.618091}
+{"_e":"metro:client_log","_t":1780615015900,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1780615015918,"level":"warn","data":["Route \"./components/ExternalLink.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615015918,"level":"warn","data":["Route \"./components/StyledText.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615015918,"level":"warn","data":["Route \"./components/Themed.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615015918,"level":"warn","data":["Route \"./components/useClientOnlyValue.web.ts\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615015918,"level":"warn","data":["Route \"./components/useColorScheme.web.ts\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:bundling:started","_t":1780615015996,"id":"b","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:client_log","_t":1780615037099,"level":"warn","data":["Image: style.resizeMode is deprecated. Please use props.resizeMode."]}
+{"_e":"metro:bundling:started","_t":1780615261484,"id":"e","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:progress","_t":1780615261484,"id":"e","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1780615261530,"id":"e","total":1,"ms":46.167434}
+{"_e":"metro:client_log","_t":1780615261997,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1780615262010,"level":"warn","data":["Route \"./components/ExternalLink.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615262010,"level":"warn","data":["Route \"./components/StyledText.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615262010,"level":"warn","data":["Route \"./components/Themed.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615262011,"level":"warn","data":["Route \"./components/useClientOnlyValue.web.ts\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615262011,"level":"warn","data":["Route \"./components/useColorScheme.web.ts\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:bundling:started","_t":1780615262056,"id":"g","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:client_log","_t":1780615410641,"level":"warn","data":["Image: style.resizeMode is deprecated. Please use props.resizeMode."]}
+{"_e":"metro:bundling:started","_t":1780615439046,"id":"j","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:progress","_t":1780615439046,"id":"j","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1780615439079,"id":"j","total":1,"ms":33.221004}
+{"_e":"metro:client_log","_t":1780615439397,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1780615439405,"level":"warn","data":["Route \"./components/ExternalLink.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615439405,"level":"warn","data":["Route \"./components/StyledText.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615439405,"level":"warn","data":["Route \"./components/Themed.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615439405,"level":"warn","data":["Route \"./components/useClientOnlyValue.web.ts\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615439405,"level":"warn","data":["Route \"./components/useColorScheme.web.ts\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615439441,"level":"warn","data":["Image: style.resizeMode is deprecated. Please use props.resizeMode."]}
+{"_e":"metro:bundling:started","_t":1780615444927,"id":"n","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:progress","_t":1780615444927,"id":"n","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1780615444964,"id":"n","total":1,"ms":36.902563}
+{"_e":"metro:client_log","_t":1780615445288,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1780615445302,"level":"warn","data":["Route \"./components/ExternalLink.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615445302,"level":"warn","data":["Route \"./components/StyledText.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615445302,"level":"warn","data":["Route \"./components/Themed.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615445303,"level":"warn","data":["Route \"./components/useClientOnlyValue.web.ts\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615445303,"level":"warn","data":["Route \"./components/useColorScheme.web.ts\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615445325,"level":"warn","data":["Image: style.resizeMode is deprecated. Please use props.resizeMode."]}
+{"_e":"metro:bundling:started","_t":1780615451712,"id":"r","platform":"web","environment":null,"entry":"node_modules/expo-router/entry.js"}
+{"_e":"metro:bundling:progress","_t":1780615451712,"id":"r","progress":0,"total":1,"current":0}
+{"_e":"metro:bundling:done","_t":1780615451751,"id":"r","total":1,"ms":39.052383}
+{"_e":"metro:client_log","_t":1780615452095,"level":"log","data":["Running application \"main\" with appParams:\n","{\"hydrate\": undefined, \"rootTag\": \"#root\"}","\nDevelopment-level warnings: ON.\nPerformance optimizations: OFF."]}
+{"_e":"metro:client_log","_t":1780615452109,"level":"warn","data":["Route \"./components/ExternalLink.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615452109,"level":"warn","data":["Route \"./components/StyledText.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615452109,"level":"warn","data":["Route \"./components/Themed.tsx\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615452109,"level":"warn","data":["Route \"./components/useClientOnlyValue.web.ts\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615452109,"level":"warn","data":["Route \"./components/useColorScheme.web.ts\" is missing the required default export. Ensure a React component is exported as default."]}
+{"_e":"metro:client_log","_t":1780615452133,"level":"warn","data":["Image: style.resizeMode is deprecated. Please use props.resizeMode."]}
