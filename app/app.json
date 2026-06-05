@@ -19,6 +19,12 @@
         {
           "image": "./assets/images/splash-icon.png",
           "resizeMode": "contain",
+          [
+            "expo-router",
+            {
+              "root": "./src"
+            }
+          ],
           "backgroundColor": "#ffffff"
         }
       ]
